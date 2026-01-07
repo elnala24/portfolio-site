@@ -18,7 +18,7 @@ export default function PortfolioPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gray-100">
       <div className="max-w-4xl mx-auto px-6 py-16 md:py-24">
         <div className="flex flex-col items-center text-center mb-12">
           <Avatar className="w-32 h-32 mb-6 ring-2 ring-border">
