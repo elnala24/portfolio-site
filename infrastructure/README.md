@@ -1,14 +1,34 @@
-# Welcome to your CDK TypeScript project
+# Portfolio Infrastructure (AWS CDK)
 
-This is a blank project for CDK development with TypeScript.
+Infrastructure as Code for deploying the portfolio site on AWS Amplify.
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+## Architecture
 
-## Useful commands
+- **AWS Amplify** - Hosting and CI/CD
+- **AWS Secrets Manager** - Secure GitHub token storage
+- **AWS CDK** - Infrastructure as Code (TypeScript)
 
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `npx cdk deploy`  deploy this stack to your default AWS account/region
-* `npx cdk diff`    compare deployed stack with current state
-* `npx cdk synth`   emits the synthesized CloudFormation template
+## Stack Resources
+
+- Amplify App connected to GitHub repo
+- Auto-build on push to main branch
+- Production deployment stage
+
+## Prerequisites
+
+- AWS CLI configured
+- Node.js installed
+- GitHub personal access token stored in Secrets Manager as `github-token-amplify`
+
+## Deploy
+```bash
+npm install
+cdk bootstrap  # One-time setup
+cdk deploy
+```
+
+## Useful Commands
+
+- `cdk deploy` - Deploy stack to AWS
+- `cdk diff` - Compare deployed stack with current state
+- `cdk synth` - Output CloudFormation template
