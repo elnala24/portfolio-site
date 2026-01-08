@@ -15,6 +15,11 @@ export default function PortfolioPage() {
       description: "Migrated AWS infrastructure to CDK with TypeScript. Designed multi-tier VPC with EC2 and Multi-AZ RDS.",
       link: "https://github.com/elnala24/project2-techhealth-cdk",
     },
+    {
+      title: "Portfolio Site with CI/CD",
+      description: "Deployed Next.js portfolio on AWS Amplify with automated CI/CD pipeline. Infrastructure defined using AWS CDK and credentials stored in Secrets Manager.",
+      link: "https://github.com/elnala24/portfolio-site",
+    },
   ]
 
   return (
