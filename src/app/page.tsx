@@ -6,6 +6,16 @@ import { Github, Linkedin, Mail } from "lucide-react"
 export default function PortfolioPage() {
   const projects = [
     {
+      title: "YouTube AI Title Generator",
+      description: "Web app that fetches YouTube video metadata and generates AI-powered title variations using TypeScript, YouTube Data API, and Groq AI.",
+      link: "https://github.com/elnala24/ytapp-project",
+    },
+    {
+      title: "Portfolio Site with CI/CD",
+      description: "Deployed Next.js portfolio on AWS Amplify with automated CI/CD pipeline. Infrastructure defined using AWS CDK and credentials stored in Secrets Manager.",
+      link: "https://github.com/elnala24/portfolio-site",
+    },
+    {
       title: "IAM Security Implementation",
       description: "Built IAM security solution with CloudFormation, Terraform, and AWS CDK. Established RBAC for 4 teams with MFA enforcement.",
       link: "https://github.com/elnala24/aws-iam-security-project",
@@ -14,11 +24,6 @@ export default function PortfolioPage() {
       title: "Infrastructure Migration to CDK",
       description: "Migrated AWS infrastructure to CDK with TypeScript. Designed multi-tier VPC with EC2 and Multi-AZ RDS.",
       link: "https://github.com/elnala24/project2-techhealth-cdk",
-    },
-    {
-      title: "Portfolio Site with CI/CD",
-      description: "Deployed Next.js portfolio on AWS Amplify with automated CI/CD pipeline. Infrastructure defined using AWS CDK and credentials stored in Secrets Manager.",
-      link: "https://github.com/elnala24/portfolio-site",
     },
   ]
 
