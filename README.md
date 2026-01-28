@@ -6,11 +6,28 @@ A modern portfolio website built with Next.js and deployed on AWS Amplify with a
 
 ## Architecture
 
+![Architecture Diagram](architecture/architecture.png)
+
+### Tech Stack
 - **Frontend:** Next.js, React, TypeScript, Tailwind CSS
-- **Hosting:** AWS Amplify
-- **CI/CD:** Automated deployments from GitHub
+- **Hosting:** AWS Amplify with CloudFront CDN
+- **CI/CD:** Automated deployments via GitHub webhooks
 - **Infrastructure:** AWS CDK (TypeScript)
+- **DNS:** Route 53
 - **Secrets:** AWS Secrets Manager (GitHub token)
+
+### How It Works
+
+**Infrastructure Deployment (one-time):**
+1. Developer runs `cdk deploy` from local machine
+2. CloudFormation creates all AWS resources (Amplify, Route 53, Secrets Manager, CloudFront)
+
+**Runtime Flow:**
+1. Developer pushes code to GitHub
+2. GitHub webhook triggers Amplify build
+3. Amplify pulls code (authenticates via Secrets Manager)
+4. Amplify builds and deploys to CloudFront
+5. Users access site through CloudFront CDN
 
 ## Features
 
@@ -18,12 +35,37 @@ A modern portfolio website built with Next.js and deployed on AWS Amplify with a
 - Automated deployments on every push to main branch
 - Infrastructure as Code using AWS CDK
 - Secure credential management with AWS Secrets Manager
+- Global content delivery via CloudFront
 
 ## Project Structure
 ```
 portfolio-project/
-├── portfolio/          # Next.js frontend
-└── portfolio-infrastructure/  # CDK infrastructure code
+├── portfolio/                    # Next.js frontend
+│   ├── src/                      # Source code
+│   ├── public/                   # Static assets
+│   └── architecture/             # Architecture diagrams
+└── portfolio-infrastructure/     # CDK infrastructure code
+```
+
+## Deployment
+
+### Prerequisites
+- AWS CLI configured
+- Node.js 18+
+- AWS CDK installed (`npm install -g aws-cdk`)
+
+### Deploy Infrastructure
+```bash
+cd portfolio-infrastructure
+npm install
+cdk deploy
+```
+
+### Local Development
+```bash
+cd portfolio
+npm install
+npm run dev
 ```
 
 ## Author
