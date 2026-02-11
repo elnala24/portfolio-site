@@ -68,7 +68,8 @@ npm install
 npm run dev
 ```
 
-## Author
+---
 
-**Alan Le**
+Made with ❤️ by Alan Le
+
 - LinkedIn: [linkedin.com/in/alantommyle](https://linkedin.com/in/alantommyle)
