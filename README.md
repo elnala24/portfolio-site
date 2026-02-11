@@ -71,5 +71,4 @@ npm run dev
 ## Author
 
 **Alan Le**
-- GitHub: [github.com/elnala24](https://github.com/elnala24)
 - LinkedIn: [linkedin.com/in/alantommyle](https://linkedin.com/in/alantommyle)
